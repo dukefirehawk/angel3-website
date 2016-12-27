@@ -1,0 +1,218 @@
+{
+  "ngDeps": {
+    "1": "highlight",
+    "3": [
+      {
+        "1": "package:js/js.dart",
+        "5": false
+      },
+      {
+        "1": "dart:html",
+        "2": [
+          "Node"
+        ],
+        "5": false
+      }
+    ],
+    "6": "highlight.dart"
+  },
+  "type": {
+    "LANGUAGES": {
+      "class": "Identifier",
+      "name": "LANGUAGES",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "blockText": {
+      "class": "Identifier",
+      "name": "blockText",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "blockLanguage": {
+      "class": "Identifier",
+      "name": "blockLanguage",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "highlight": {
+      "class": "Identifier",
+      "name": "highlight",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "highlightAuto": {
+      "class": "Identifier",
+      "name": "highlightAuto",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "fixMarkup": {
+      "class": "Identifier",
+      "name": "fixMarkup",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "highlightBlock": {
+      "class": "Identifier",
+      "name": "highlightBlock",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "initHighlighting": {
+      "class": "Identifier",
+      "name": "initHighlighting",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "initHighlightingOnLoad": {
+      "class": "Identifier",
+      "name": "initHighlightingOnLoad",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "tabReplace": {
+      "class": "Identifier",
+      "name": "tabReplace",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "IDENT_RE": {
+      "class": "Identifier",
+      "name": "IDENT_RE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "UNDERSCORE_IDENT_RE": {
+      "class": "Identifier",
+      "name": "UNDERSCORE_IDENT_RE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "NUMBER_RE": {
+      "class": "Identifier",
+      "name": "NUMBER_RE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "C_NUMBER_RE": {
+      "class": "Identifier",
+      "name": "C_NUMBER_RE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "BINARY_NUMBER_RE": {
+      "class": "Identifier",
+      "name": "BINARY_NUMBER_RE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "RE_STARTERS_RE": {
+      "class": "Identifier",
+      "name": "RE_STARTERS_RE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "BACKSLASH_ESCAPE": {
+      "class": "Identifier",
+      "name": "BACKSLASH_ESCAPE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "APOS_STRING_MODE": {
+      "class": "Identifier",
+      "name": "APOS_STRING_MODE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "QUOTE_STRING_MODE": {
+      "class": "Identifier",
+      "name": "QUOTE_STRING_MODE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "C_LINE_COMMENT_MODE": {
+      "class": "Identifier",
+      "name": "C_LINE_COMMENT_MODE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "C_BLOCK_COMMENT_MODE": {
+      "class": "Identifier",
+      "name": "C_BLOCK_COMMENT_MODE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "HASH_COMMENT_MODE": {
+      "class": "Identifier",
+      "name": "HASH_COMMENT_MODE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "NUMBER_MODE": {
+      "class": "Identifier",
+      "name": "NUMBER_MODE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "C_NUMBER_MODE": {
+      "class": "Identifier",
+      "name": "C_NUMBER_MODE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "BINARY_NUMBER_MODE": {
+      "class": "Identifier",
+      "name": "BINARY_NUMBER_MODE",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "IHighlightResult": {
+      "class": "Identifier",
+      "name": "IHighlightResult",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "IAutoHighlightResult": {
+      "class": "Identifier",
+      "name": "IAutoHighlightResult",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    },
+    "IMode": {
+      "class": "Identifier",
+      "name": "IMode",
+      "moduleUrl": "asset:angel_site/lib/highlight.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

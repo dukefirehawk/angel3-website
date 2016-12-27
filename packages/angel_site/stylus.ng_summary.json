@@ -1,0 +1,26 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "package:barback/barback.dart",
+        "5": false
+      },
+      {
+        "1": "package:stylus/stylus.dart",
+        "5": false
+      }
+    ],
+    "6": "stylus.dart"
+  },
+  "type": {
+    "StylusTransformer": {
+      "class": "Identifier",
+      "name": "StylusTransformer",
+      "moduleUrl": "asset:angel_site/lib/stylus.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

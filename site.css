@@ -1,0 +1,40 @@
+code.hljs {
+  text-align: left !important;
+  border-radius: 1rem;
+  font-family: Menlo, Monaco, Courier, monospace;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 1rem;
+}
+.hljs {
+  white-space: pre;
+}
+html,
+body {
+  background-color: #e8ecf2;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+material-fab {
+  background-color: #d81c1c !important;
+  color: #fff;
+  position: fixed !important;
+  bottom: 1em;
+  right: 1em;
+}
+.centered {
+  text-align: center;
+}
+.image-container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.page-content {
+  color: #3a3b3d;
+  padding: 1em;
+}
+.page-content .vertical {
+  margin-bottom: 0;
+  margin-top: 0;
+}

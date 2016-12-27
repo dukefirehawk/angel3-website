@@ -1,0 +1,162 @@
+{
+  "ngDeps": {
+    "1": "",
+    "3": [
+      {
+        "1": "dart:html",
+        "5": false
+      },
+      {
+        "1": "package:angel_site/highlight.dart",
+        "4": "hljs",
+        "5": false
+      },
+      {
+        "1": "package:angular2/angular2.dart",
+        "5": false
+      },
+      {
+        "1": "package:angular2/router.dart",
+        "5": false
+      },
+      {
+        "1": "package:angular2_components/angular2_components.dart",
+        "5": false
+      },
+      {
+        "1": "../../services/title.dart",
+        "5": false
+      }
+    ],
+    "5": [
+      {
+        "1": "GetStartedComponent",
+        "5": [
+          {
+            "1": "ElementRef",
+            "4": "_ref"
+          },
+          {
+            "1": "TitleService",
+            "4": "_titleService"
+          }
+        ],
+        "6": [
+          "OnActivate",
+          "OnInit"
+        ],
+        "7": [
+          {
+            "2": "materialDirectives"
+          }
+        ]
+      }
+    ],
+    "6": "get_started.dart",
+    "7": [
+      {
+        "1": "package:angel_site/highlight.template.dart",
+        "4": "i0"
+      },
+      {
+        "1": "package:angular2/angular2.template.dart",
+        "4": "i1"
+      },
+      {
+        "1": "package:angular2/router.template.dart",
+        "4": "i2"
+      },
+      {
+        "1": "package:angular2_components/angular2_components.template.dart",
+        "4": "i3"
+      },
+      {
+        "1": "../../services/title.template.dart",
+        "4": "i4"
+      }
+    ]
+  },
+  "type": {
+    "GetStartedComponent": {
+      "class": "Directive",
+      "isComponent": true,
+      "selector": "get-started",
+      "exportAs": null,
+      "type": {
+        "class": "Type",
+        "name": "GetStartedComponent",
+        "moduleUrl": "asset:angel_site/web/components/get_started/get_started.dart",
+        "prefix": null,
+        "isHost": false,
+        "value": null,
+        "diDeps": [
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "ElementRef",
+                "moduleUrl": "asset:angular2/lib/src/core/linker/element_ref.dart",
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          },
+          {
+            "token": {
+              "value": null,
+              "identifier": {
+                "class": "Identifier",
+                "name": "TitleService",
+                "moduleUrl": "asset:angel_site/web/services/title.dart",
+                "prefix": null,
+                "value": null
+              },
+              "identifierIsInstance": false
+            },
+            "value": null,
+            "isAttribute": false,
+            "isSelf": false,
+            "isHost": false,
+            "isSkipSelf": false,
+            "isOptional": false,
+            "isValue": false
+          }
+        ]
+      },
+      "changeDetection": 6,
+      "inputs": {},
+      "inputTypes": {},
+      "outputs": {},
+      "hostListeners": {},
+      "hostProperties": {},
+      "hostAttributes": {},
+      "lifecycleHooks": [
+        0
+      ],
+      "template": {
+        "encapsulation": 0,
+        "template": "<div class=\"page-content\">\n    <h1>Getting Started</h1>\n    <div>\n        Angel provides a wealth of functionality out of the box,\n        which makes development faster. To expedite it even more,\n        install the <a href=\"https://github.com/angel-dart/cli\">Angel CLI</a>.\n        <br>\n        <code class=\"bash\">$ pub global activate angel_cli</code>\n        <br>\n        You can bootstrap a complete application with one simple command:\n        <br>\n        <code class=\"bash\">$ angel init</code>\n        <br>\n        <code class=\"bash\">\n# Two ways to boot your application:\n\n# 1. Support for start scripts and additional pre-boot options:\n$ angel start\n\n# 2. Faster startup, but not configurable:\n$ dart bin/server.dart\n        </code>\n        <br>\n        And that's it! Check out the\n        <a href=\"https://github.com/angel-dart/angel/wiki\">Wiki</a>\n        for more in-depth documentation.\n    </div>\n</div>",
+        "templateUrl": "asset:angel_site/web/components/get_started/get_started.html",
+        "styles": [],
+        "styleUrls": [
+          "asset:angel_site/web/components/get_started/get_started.css"
+        ],
+        "ngContentSelectors": []
+      },
+      "providers": [],
+      "viewProviders": [],
+      "queries": [],
+      "viewQueries": []
+    }
+  },
+  "alias": {}
+}
