@@ -1,5 +1,13 @@
-<div id="offcanvas" uk-offcanvas>
+<div id="offcanvas">
     <div class="uk-offcanvas-bar">
         <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <div class="uk-panel">
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-nav-header">General</li>
+                {% for page in site.pages %}
+                    <li><a href="{{ post.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </div>
