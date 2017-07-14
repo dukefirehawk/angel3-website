@@ -11,6 +11,7 @@ permalink: /about/
 To name just a **few** of its features:
   * Fast startup and [hot-reloading](https://github.com/angel-dart/hot)
   * [Dependency injection](https://github.com/angel-dart/angel/wiki/Dependency-Injection)
+  * [Strongly-typed ORM](https://github.com/angel-dart/orm)
   * [WebSocket support](https://github.com/angel-dart/websocket)
   * Database-agnostic [services](https://github.com/angel-dart/angel/wiki/Service-Basics)
   * [Service hooks](https://github.com/angel-dart/angel/wiki/Hooks) to augment functionality
