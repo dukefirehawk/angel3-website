@@ -1,77 +1,322 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     {% include head.html %}
     <title>The Angel Framework</title>
-</head>
+    <style>
+        pre {
+            background-color: transparent;
+        }
 
-<body class="main">
-    <div class="uk-offcanvas-content">
-        {% include header.html %}
-        <div class="uk-section uk-section-primary main">
-            <div uk-height-viewport="offset-top: true; offset-bottom: true" class="uk-section uk-section-small uk-flex uk-flex-middle uk-text-center"
-                style="box-sizing: border-box;">
-                <div class="uk-width-1-1">
-                    <div class="uk-container">
-                        <p><img src="{{ 'assets/images/logo-white.png' | absolute_url}}"></p>
-                        <p class="uk-margin-medium uk-text-lead">
-                            A scalable, full-featured, full-stack framework in Dart.
+        code:not(.nohighlight) {
+            border-radius: 10px !important;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            padding: 1em !important;
+        }
+
+        .section li {
+            list-style-type: circle;
+        }
+    </style>
+</head>
+<body>
+<section class="hero is-fullheight is-info is-bold">
+    <div class="hero-head">
+        <nav class="navbar is-transparent is-boxed">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="">
+                    <img src="{{ 'assets/images/favicon-white48.png' | absolute_url}}" alt="The Angel Framework"></a>
+                </a>
+                <button class="navbar-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="https://github.com/angel-dart/angel" class="navbar-item">
+                        <i class="fa fa-github"></i>
+                        &nbsp;GITHUB
+                    </a>
+                    <a href="https://gitter.im/angel_dart/discussion" class="navbar-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="20" height="20" viewBox="0 0 20 20"
+                             icon="gitter" ratio="1">
+                            <rect x="3.5" y="1" width="1.531" height="11.471"></rect>
+                            <rect x="7.324" y="4.059" width="1.529" height="15.294"></rect>
+                            <rect x="11.148" y="4.059" width="1.527" height="15.294"></rect>
+                            <rect x="14.971" y="4.059" width="1.529" height="8.412"></rect>
+                        </svg>
+                        &nbsp;CHAT
+                    </a>
+                    <a href="https://github.com/angel-dart/angel/wiki" class="navbar-item">
+                        DOCS
+                    </a>
+                    <a href="https://github.com/angel-example" class="navbar-item">
+                        EXAMPLES
+                    </a>
+                    <a href="http://www.dartdocs.org/documentation/angel_framework/latest" class="navbar-item">
+                        API REFERENCE
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <img src="{{ 'assets/images/logo-white.png' | absolute_url}}">
+            <h2 class="subtitle">
+                A scalable, full-featured, full-stack framework in Dart.
+            </h2>
+            <a href="#about" class="button is-info is-inverted is-outlined">
+                Get Started
+            </a>
+            <br><br>
+            <a class="tags has-addons" href="https://github.com/angel-dart/angel/stargazers" target="_blank"
+               style="display: inline-flex">
+                <span class="tag is-dark">
+                    <i class="fa fa-github"></i>
+                    &nbsp;Star
+                </span>
+                <span class="tag stargazers">...</span>
+            </a>
+        </div>
+    </div>
+</section>
+<section id="about" class="section">
+    <div class="container">
+        <h1 class="title">
+            Batteries included.
+        </h1>
+        <h2 class="subtitle">
+            To name just a <strong>few</strong> of Angel's features:
+        </h2>
+        <ul>
+            <li>Fast startup and <a href="https://github.com/angel-dart/hot">hot-reloading</a></li>
+            <li><a href="https://github.com/angel-dart/angel/wiki/Dependency-Injection">Dependency injection</a></li>
+            <li><a href="https://github.com/angel-dart/orm">Strongly-typed PostgreSQL ORM</a></li>
+            <li><a href="https://github.com/angel-dart/websocket">WebSocket support</a></li>
+            <li>Database-agnostic <a href="https://github.com/angel-dart/angel/wiki/Service-Basics">services</a></li>
+            <li><a href="https://github.com/angel-dart/angel/wiki/Hooks">Service hooks</a> to augment functionality</li>
+            <li>Cross-platform <a href="https://github.com/angel-dart/validate">validation</a></li>
+            <li>An extensive <a href="https://github.com/angel-dart/client">client library</a></li>
+            <li>Highly-extensible <a href="https://github.com/angel-dart/angel/wiki/Using-Plug-ins">plug-in system</a>
+            </li>
+            <li>Much more…</li>
+        </ul>
+        <br>
+        <p>
+            Angel's batteries-included experience means you'll never have to waste time
+            rewriting common functionality.
+        </p>
+    </div>
+</section>
+<section class="hero is-info is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Setup is simple.
+            </h1>
+            <h2 class="subtitle">
+                Scaffolding and more, out-of-the-box.
+            </h2>
+
+            <p>
+                Thanks to the handy <a href="https://github.com/angel-dart/cli">Angel CLI</a>,
+                your project is just an <code class="nohighlight"><span class="hljs-keyword">angel init</span></code>
+                away.
+            </p>
+
+            <br>
+
+            <pre>
+                <code class="bash">
+#!/usr/bin/env bash
+pub global activate angel_cli
+angel init hello
+                </code>
+            </pre>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <h1 class="title">
+            Share more, write less.
+        </h1>
+
+        <p>
+            Unlike those built with other frameworks, applications running Angel can share significant amounts of
+            code between the server and client(s), and bring up MVP’s faster than ever before.
+        </p>
+        <br>
+        <p>
+            Angel is a perfect match for applications using
+            <a href="https://dart.academy/building-a-real-time-chat-app-with-angel-and-flutter/">Flutter</a> or
+            <a href="https://dart.academy/using-angel-with-angular2/">Angular</a>.
+        </p>
+    </div>
+</section>
+<section class="hero is-info is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Easy to learn.
+            </h1>
+            <h2 class="subtitle">
+                Angel is full of familiar constructs to make the learning curve minimal.
+            </h2>
+            <div class="level">
+                <div class="level-item">
+                    <div>
+                        <p class="heading has-text-centered">
+                            Flexible Routing
                         </p>
-                        <div id="big-buttons" class="uk-child-width-auto uk-grid-medium uk-flex-inline uk-flex-center uk-grid" uk-grid>
-                            <div class="uk-first-column">
-                                <a href="about" class="uk-button uk-button-primary tm-button-primary uk-button-large tm-button-large uk-visible@s">
-                                Get Started
-                            </a>
-                                <a href="about" class="uk-button uk-button-primary tm-button-primary uk-hidden@s">
-                                Get Started
-                            </a>
-                            </div>
-                        </div>
+                        <pre>
+                        <code class="dart">
+app.chain(findUser).group('/user/:id', (router) {
+  router.get('/profile', (req, res) {
+    return res.render({
+      'title': 'Profile of ${user.name}',
+      'user': user,
+    });
+  });
+});
+                        </code>
+                    </pre>
+                    </div>
+                </div>
+                <div class="level-item">
+                    <div>
+                        <p class="heading has-text-centered">
+                            MVC Controllers
+                        </p>
+                        <pre>
+                        <code class="dart">
+@Expose('/foo')
+class FooController extends Controller {
+  @Expose('/bar')
+  String bar() => 'baz';
+
+  @Expose('/quux', method: 'POST')
+  String quux() => { 'angel' : 'framework' };
+}
+                        </code>
+                    </pre>
                     </div>
                 </div>
             </div>
-            <div class="uk-section-small">
-                <div class="uk-container uk-container-expand uk-text-center uk-position-relative">
-                    <ul uk-margin class="uk-subnav tm-subnav uk-flex-inline uk-flex-center uk-margin-remove-bottom">
-                        <li class="uk-first-column">
-                            <span>
-                        Version
-                            <span uikit-version>1.0.0</span>
-                            </span>
-                        </li>
-                        <li>
-                            <a href="https://github.com/angel-dart/angel/stargazers">
-                                <span uk-icon="icon: star" class="uk-margin-small-right uk-icon"></span>
-                                <span uikit-stargazers></span> Stars
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/AngelFramework" class="uk-text-lowercase">
-                                <span uk-icon="icon: twitter" class="uk-margin-small-right uk-icon"></span> @AngelFramework
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://gitter.im/angel_dart/discussion">
-                                <span uk-icon="icon: gitter" class="uk-margin-small-right uk-icon"></span> Chat
-                            </a>
-                        </li>
-                    </ul>
+            <div class="level">
+                <div class="level-item">
+                    <div>
+                        <p class="heading has-text-centered">
+                            Strongly-typed ORM
+                        </p>
+                        <pre>
+                        <code class="dart">
+var query = new CarQuery();
+query.where
+  ..luxury.equals(true)
+  ..yearGreaterThan(2014);
+
+var cars = await query.get().toList();
+                        </code>
+                    </pre>
+                    </div>
+                </div>
+                <div class="level-item">
+                    <div>
+                        <p class="heading has-text-centered">
+                            Stateless Authentication
+                        </p>
+                        <pre>
+                        <code class="dart">
+var auth = new AngelAuth(
+  jwtKey: app.configuration['jwt_secret'],
+  allowCookie: false,
+);
+app.get('/auth/twitter', auth.authenticate('twitter'));
+
+                        </code>
+                    </pre>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    {% include offcanvas.html %}
-    {% include scripts.html %}
-    <script>
-        $(function () {
-            fetch('https://api.github.com/repos/angel-dart/angel').then(function (res) {
-                return res.json();
-            }).then(function (repo) {
-                $('[uikit-stargazers]').text('' + repo.stargazers_count);
-            });
+</section>
+<section class="footer">
+    <div class="container">
+        <div class="level" style="padding: 1em;">
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Version</p>
+                    <div class="title">
+                        <a class="tags has-addons" href="https://pub.dartlang.org/packages/angel_framework">
+                            <span class="tag is-dark">pub</span>
+                            <span class="tag is-info">1.1.0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Stars</p>
+                    <p class="title">
+                        <i class="fa fa-github"></i>
+                        &nbsp;<span class="stargazers">...</span>
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">
+                        Blog
+                    </p>
+                    <p class="title">
+                        <a href="https://medium.com/the-angel-framework" class="button is-dark">
+                            <span class="icon">
+                                <i class="fa fa-medium"></i>
+                            </span>
+                            <span>Follow</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">
+                        Chat
+                    </p>
+                    <div class="title">
+                        <a class="tags has-addons" href="https://gitter.im/angel_dart/discussion">
+                            <span class="tag is-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="20" height="20" viewBox="0 0 20 20"
+                                     icon="gitter" ratio="1">
+                                    <rect x="3.5" y="1" width="1.531" height="11.471"></rect>
+                                    <rect x="7.324" y="4.059" width="1.529" height="15.294"></rect>
+                                    <rect x="11.148" y="4.059" width="1.527" height="15.294"></rect>
+                                    <rect x="14.971" y="4.059" width="1.529" height="8.412"></rect>
+                                </svg>
+                                &nbsp;chat
+                            </span>
+                            <span class="tag is-primary">on gitter</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include scripts.html %}
+<script>
+    $(function () {
+        fetch('https://api.github.com/repos/angel-dart/angel').then(function (res) {
+            return res.json();
+        }).then(function (repo) {
+            $('.stargazers').text('' + repo.stargazers_count);
         });
-    </script>
+    });
+</script>
 </body>
-
 </html>
