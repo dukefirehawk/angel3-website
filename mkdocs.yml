@@ -1,0 +1,8 @@
+site_name: 'Angel Framework Documentation'
+theme:
+  name: 'material'
+  palette:
+    primary: 'teal'
+    accent: 'indigo'
+markdown_extensions:
+  - codehilite
