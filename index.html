@@ -396,6 +396,10 @@ app.get('/user/:username', (req, res) async {
     <script>
         hljs.initHighlightingOnLoad();
         $(function () {
+            $('.navbar-burger').click(function() {
+                $('.navbar-menu').toggleClass('is-active');
+            });
+
             var sliderButtons = $('#slider .fa-circle');
             var sliderTimeout;
             sliderButtons.click(sliderToggle);
