@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Angel - Dart on the Server</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <style>
+        body {
+            position: relative;
+        }
+
+        .hero-head nav {
+            background: #fff !important;
+            box-shadowa: 0px 5px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero {
+            background: #f1f1f1;
+            background: #fff;
+        }
+
+        .section.code {
+            background: #1f1f1f;
+            color: #fff;
+        }
+
+        .section.primary {
+            background: #d81c1c;
+            background: #f1f1f1;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+            position: relative;
+        }
+
+        .primarya.section .title,
+        .primarya.section .subtitle,
+        .section.code .title,
+        .section.code .subtitle {
+            color: #fff;
+        }
+
+        .footer {
+            background: #121212;
+        }
+
+        .why,
+        .footera {
+            display: none;
+        }
+
+        #slider {
+            position: relative;
+            text-align: center;
+        }
+
+        #slider.has-image code {
+            background-image: url('assets/images/hot_reload.png');
+            background-size: cover;
+            color: transparent;
+        }
+
+        #slider.has-image code span {
+            opacity: 0;
+        }
+
+        #slider img,
+        #slider pre {
+            text-align: left;
+        }
+
+        .fa-circle,
+        .fa-circle-thin {
+            border-radius: 50%;
+            box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            margin: auto;
+        }
+
+        pre {
+            background: transparent;
+            margin: 0;
+            padding: 0;
+        }
+
+        img.screenshot {
+            box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        code.hljs {
+            font-family: Consolas, "Liberation Mono", Menlo, Monaco, Lucida Console,
+                Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+                Courier New, monospace, serif;
+            line-height: 1.3em;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+            overflow-x: auto;
+            padding: 0 1em;
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        .hljs-keyword {
+            font-weight: normal;
+        }
+
+        .column.text {
+            padding-top: 2em;
+        }
+
+        .column.text .title {
+            padding-bottom: 0.5em;
+        }
+
+        .readme {
+            background: #f1f1f1;
+            color: #6a6a6a;
+            font-size: 0.8em;
+            padding: 5px;
+        }
+
+        .is-angel {
+            border-color: #d81c1c;
+            color: #d81c1c;
+        }
+
+        .is-gitter {
+            background: #ed1965 !important;
+        }
+
+        @media(max-width: 768px) {
+            .readme span {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="readme">
+        <div class="container has-text-centered">
+            <p>Angel 2 is out now!
+                <span>Introducing Dart 2 support, performance improvements, GraphQL, and more.</span>
+            </p>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="hero-head" style="padding-bottom: 1em">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item">
+                            Docs
+                        </a>
+                        <a class="navbar-item">
+                            Chat
+                        </a>
+
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                More
+                            </a>
+
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item">
+                                    About
+                                </a>
+                                <a class="navbar-item">
+                                    Jobs
+                                </a>
+                                <a class="navbar-item">
+                                    Contact
+                                </a>
+                                <hr class="navbar-divider" />
+                                <a class="navbar-item">
+                                    Report an issue
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-black" href="https://github.com/angel-dart/angel" target="_blank">
+                                    <span class="icon is-small">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Fork</span>
+                                </a>
+                                <a class="button is-dark is-gitter" href="https://gitter.im/angel_dart/discussion"
+                                    target="_blank">
+                                    <span class="icon is-small">
+                                        <i class="fab fa-gitter"></i>
+                                    </span>
+                                    <span>Chat</sp>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body has-text-centered">
+            <div class="container">
+                <div class="title" style="margin-bottom: 0">
+                    <img src="assets/images/logo.png" style="max-height: 3em" alt="Angel" />
+                </div>
+                <div class="subtitle" style="margin: auto; max-width: 30em">
+                    A polished, production-ready backend framework in Dart.
+                </div>
+                <br>
+                <a class="button is-light" style="border: 1px solid #dbdbdb"
+                    href="https://angel-dart.gitbook.io/angel/the-basics/installation" target="_blank">
+                    Get Started
+                </a>
+                <a class="button" href="https://www.youtube.com/playlist?list=PLl3P3tmiT-fqGCB2vSPq8HhpugEDNWUo6"
+                    target="_blank">
+                    <span class="icon is-small">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video Tutorials</span>
+                </a>
+                <br><br>
+                <span style="font-size:0.8em; font-weight: 900; text-transform: uppercase;">Install it right away:</span>
+                <pre style="margin-bottom: -3em">
+                    <code class="bash" style="text-align: left; width: fit-content; margin: auto;">
+# Install the Angel CLI, and scaffold a project.
+$ pub global activate angel_cli
+$ angel init hello
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <section class="code section">
+        <div class="columns">
+            <div class="text column">
+                <div class="title">Ready for showtime.</div>
+                <div class="subtitle">
+                    With features like <b>hot reloading 🔥</b>, <b>GraphQL</b>,
+                    and <b>ORM</b>, Angel is the perfect Dart backend to power
+                    production apps.
+                    <br><br>
+                    Angel also provides support for <b>server-side templating</b>,
+                    <b>WebSockets</b>, <b>authentication</b>, and much, much more.
+                </div>
+            </div>
+            <div id="slider" class="column">
+                <img src="assets/images/hot_reload.png" alt="Hot Reload screenshot" class="screenshot"
+                    style="display: none">
+                <pre>
+              <code class="dart">
+import 'package:angel_framework/angel_framework.dart';
+import 'package:angel_framework/http.dart';
+
+main() async {
+  var app = Angel(), http = AngelHttp();
+  app
+    ..get('/', (req, res) => res.writeln('Hello, Angel!'));
+    ..fallback((req, res) => throw AngelHttpException.notFound());
+  await http.startServer('127.0.0.1', 3000);
+  print('Listening at ${http.uri}');
+}
+              </code>
+            </pre>
+                <i class="fas fa-circle"></i>
+                <i class="far fa-circle"></i>
+            </div>
+        </div>
+    </section>
+    <section class="primary section">
+        <div class="columns">
+            <div class="column">
+                <pre>
+              <code class="dart">
+var ws = AngelWebSocket()..onConnection.listen((sock) => ...);
+app.get('/ws', ws.handleRequest);
+app.use('/api/todos', MongoService(db.collection('todos')));
+app.get('/hello/:name/int:age', (req, res) {
+  var name = req.params['name'] as String;
+  res.write('Hello, $name!');
+});
+              </code>
+            </pre>
+            </div>
+            <div class="text column">
+                <div class="title">Batteries included.</div>
+                <div class="subtitle">
+                    With <b>over 3 dozen official extension packages and counting</b>, and
+                    the flexibility to easily add functionality, Angel has all the tools
+                    you need to build an application of any size.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="code section">
+        <div class="columns">
+            <div class="text column">
+                <div class="title">It just works.</div>
+                <div class="subtitle">
+                    Angel is stable, and won't unexpectedly break you. What's more,
+                    components like ORM and serialization are designed from the ground-up
+                    to work together, seamlessly.
+                    <br><br>
+                    You can spend less time worrying about bugs, and more time getting your
+                    product to market.
+                </div>
+            </div>
+            <div class="column">
+                <pre>
+                    <code class="dart">
+// lib/src/models/user.dart
+@serializable
+@orm
+abstract class _User extends Model {
+  String get username;
+  int get age;
+}
+
+// lib/my_app.dart
+app.get('/user/:username', (req, res) async {
+  var username = req.params['username'] as String;
+  var executor = req.container.make<QueryExecutor>();
+  var query = UserQuery()..where.username.equals(username);
+  return await query.getOne(executor);
+});
+                    </code>
+                  </pre>
+            </div>
+        </div>
+    </section>
+    <section class="why section">
+        <div class="container">
+            <div class="title">Why Angel?</div>
+            <div class="subtitle">...</div>
+            <br />
+        </div>
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Tweets</p>
+                    <p class="title">3,456</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Following</p>
+                    <p class="title">123</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Followers</p>
+                    <p class="title">456K</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Likes</p>
+                    <p class="title">789</p>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <footer class="footera">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Bulma</strong> by
+                <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
+                licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
+                website content is licensed
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/bash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/dart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        $(function () {
+            var sliderButtons = $('#slider .fa-circle');
+            var sliderTimeout;
+            sliderButtons.click(sliderToggle);
+            sliderTimeout = setTimeout(sliderToggle, 5000);
+
+            function sliderToggle() {
+                $('#slider').toggleClass('has-image');
+                sliderButtons.toggleClass('far').toggleClass('fas');
+                if (sliderTimeout) clearTimeout(sliderTimeout);
+                sliderTimeout = setTimeout(sliderToggle, 5000);
+            }
+        });
+    </script>
+</body>
+
+</html>
