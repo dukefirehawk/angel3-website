@@ -409,28 +409,33 @@ class AccountsController extends Controller {
                     <br><br>
                     And thanks to its
                     <a href="https://github.com/angel-dart/test" target="_blank">unit testing support</a>,
-                    You can spend less time worrying about hidden bugs, and more time getting your
+                    you can ensure that your product works as expected, before hitting production.
+                    Spend less time worrying about unforeseen bugs, and more time getting your
                     product to market.
                 </div>
+                <a href="https://angel-dart.gitbook.io/angel/v/2.x/guides/testing" class="button is-light" target="_blank">
+                    Learn about testing...
+                </a>
             </div>
             <div class="column">
                 <pre>
                     <code class="dart">
-// lib/src/models/user.dart
-@serializable
-@orm
-abstract class _User extends Model {
-  String get username;
-  int get age;
-}
+void main() {
+  TestClient client;
 
-// lib/my_app.dart
-app.get('/user/:username', (req, res) async {
-  var username = req.params['username'] as String;
-  var executor = req.container.make<QueryExecutor>();
-  var query = UserQuery()..where.username.equals(username);
-  return await query.getOne(executor);
-});
+  setUp(() async {
+      var app = Angel();
+      await app.configure(myApp.configureServer);
+      client = await connectTo(app);
+  });
+
+  tearDown(() => client.close());
+
+  test('cannot view secret content', () async {
+      var response = await client.get('/secret');
+      expect(response, hasStatus(403));
+  });
+}
                     </code>
                   </pre>
             </div>
