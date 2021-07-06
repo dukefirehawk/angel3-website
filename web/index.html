@@ -2,20 +2,14 @@
 <html lang="en">
 
 <head>
+    <base href="/">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Angel - Dart on the Server</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121584030-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-121584030-1');
-    </script>
+    <title>Angel3 - Dart on the Server</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Angel is a polished, production-ready backend framework in Dart, supporting GraphQL, MVC, WebSockets, ORM, MongoDB, and much, much more.">
+    <meta name="description" content="Angel3 is a polished, production-ready backend framework in Dart, supporting GraphQL, MVC, WebSockets, ORM, MongoDB, and much, much more.">
     <meta name="keywords" content="Dart,framework,server,server-side,angel,angel-framework,framework,jaguar,aqueduct,google,express,routing,web,webdev,developer">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
@@ -168,21 +162,25 @@
             }
         }
     </style>
+
+    <script defer src="index.dart.js" type="application/dart"></script>
+
 </head>
 
 <body>
+    <main-app></main-app>
+
     <section class="readme">
         <div class="container has-text-centered">
             <p>
-                Angel 2 is out now!
-                <span>Brings Dart 2 support, GraphQL support, and more.</span>
+                Angel3 is out now!
+                <span>Brings Dart 2 NNBD support, GraphQL support, and more.</span>
+                <!--
                 <a href="https://thosakwe.com/new-features-coming-to-angel-in-version-2-0-0/" target="_blank">
                     Read more
                 </a>.
+                -->
             </p>
-            <!--<p>Angel 2 is out now!
-                <span>Introducing Dart 2 support, performance improvements, GraphQL, and more.</span>
-            </p>-->
         </div>
     </section>
     <section class="hero">
@@ -199,10 +197,10 @@
 
                 <div id="navbarBasicExample" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item" href="https://docs.angel-dart.dev/v/2.x" target="_blank">
+                        <a class="navbar-item" href="https://angel3-docs.dukefirehawk.com" target="_blank">
                             Docs
                         </a>
-                        <a class="navbar-item" target="_blank" href="https://github.com/angel-dart/examples-v2">
+                        <a class="navbar-item" target="_blank" href="https://github.com/dukefirehawk/angel3-examples">
                             Examples
                         </a>
 
@@ -214,42 +212,42 @@
 
                             <div class="navbar-dropdown">
                                 <a class="navbar-item" target="_blank"
-                                    href="https://github.com/angel-dart/awesome-angel">
+                                    href="https://github.com/dukefirehawk/angel3-awesome">
                                     Awesome Angel
                                 </a>
                                 <a class="navbar-item" target="_blank"
-                                    href="https://github.com/angel-dart/awesome-angel#companies-using-angel-in-production">
+                                    href="https://github.com/dukefirehawk/angel3-awesome#companies-using-angel-in-production">
                                     Who's Using Angel
                                 </a>
                                 <hr class="navbar-divider" />
-                                <a class="navbar-item" target="_blank" href="https://github.com/angel-dart/graphql">
+                                <a class="navbar-item" target="_blank" href="https://github.com/dukefirehawk/graphql_dart">
                                     GraphQL support
                                 </a>
-                                <a class="navbar-item" target="_blank" href="https://github.com/angel-dart/jael">
+                                <a class="navbar-item" target="_blank" href="https://github.com/dukefirehawk/angel/tree/master/packages/jael">
                                     Jael templating engine
                                 </a>
-                                <a class="navbar-item" target="_blank" href="https://github.com/angel-dart/client">
+                                <a class="navbar-item" target="_blank" href="https://github.com/dukefirehawk/angel/tree/master/packages/client">
                                     Client-side support
                                 </a>
                                 <a class="navbar-item" target="_blank"
-                                    href="https://github.com/angel-dart/configuration">
+                                    href="https://github.com/dukefirehawk/angel/tree/master/packages/configuration">
                                     App configuration
                                 </a>
-                                <a class="navbar-item" target="_blank" href="https://github.com/angel-dart/auth">
+                                <a class="navbar-item" target="_blank" href="https://github.com/dukefirehawk/angel/tree/master/packages/auth">
                                     Authentication
                                 </a>
-                                <a class="navbar-item" target="_blank" href="https://github.com/angel-dart/validate">
+                                <a class="navbar-item" target="_blank" href="https://github.com/dukefirehawk/angel/tree/master/packages/validate">
                                     Validation
                                 </a>
-                                <a class="navbar-item" target="_blank" href="https://github.com/angel-dart/orm">
+                                <a class="navbar-item" target="_blank" href="https://github.com/dukefirehawk/angel/tree/master/packages/orm">
                                     PostgreSQL ORM
                                 </a>
-                                <a class="navbar-item" target="_blank" href="https://github.com/angel-dart/mongo">
+                                <a class="navbar-item" target="_blank" href="https://github.com/dukefirehawk/angel/tree/master/packages/mongo">
                                     MongoDB support
                                 </a>
                                 <hr class="navbar-divider" />
                                 <a class="navbar-item" target="_blank"
-                                    href="https://pub.dartlang.org/packages?q=angel&api=0">
+                                    href="https://pub.dev/packages?q=angel3">
                                     Full list of packages...
                                 </a>
                             </div>
@@ -259,7 +257,7 @@
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="buttons">
-                                <a class="button is-black" href="https://github.com/angel-dart/angel" target="_blank">
+                                <a class="button is-black" href="https://github.com/dukefirehawk/angel" target="_blank">
                                     <span class="icon is-small">
                                         <i class="fab fa-github"></i>
                                     </span>
@@ -272,6 +270,7 @@
                                     </span>
                                     <span>Chat</sp>
                                 </a>
+                                <!--
                                 <a class="button is-light" href="https://forum.angel-dart.dev"
                                     target="_blank">
                                     <span class="icon is-small">
@@ -279,6 +278,7 @@
                                     </span>
                                     <span>Forum</sp>
                                 </a>
+                                -->
                             </div>
                         </div>
                     </div>
@@ -288,14 +288,14 @@
         <div class="hero-body has-text-centered">
             <div class="container">
                 <div class="title" style="margin-bottom: 0">
-                    <img src="assets/images/logo.png" style="max-height: 3em" alt="Angel" />
+                    <img src="img/logo3.png" style="max-height: 3em" alt="Angel" />
                 </div>
                 <div class="subtitle" style="margin: auto; max-width: 30em">
                     A polished, production-ready backend framework in Dart.
                 </div>
                 <br>
                 <a class="button is-light" style="border: 1px solid #dbdbdb"
-                    href="https://docs.angel-dart.dev/v/2.x/guides/getting-started" target="_blank">
+                    href="https://angel3-docs.dukefirehawk.com/guides/getting-started" target="_blank">
                     Get Started
                 </a>
                 <a class="button" href="https://www.youtube.com/playlist?list=PLl3P3tmiT-fqGCB2vSPq8HhpugEDNWUo6"
@@ -310,8 +310,8 @@
                     away:</span>
                 <pre style="margin-bottom: -3em">
                     <code class="bash" style="text-align: left; width: fit-content; margin: auto;">
-# Install the Angel CLI, and scaffold a project.
-$ pub global activate angel_cli
+# Install the Angel3 CLI, and scaffold a project.
+$ pub global activate angel3_cli
 $ angel init hello
                     </code>
                 </pre>
@@ -327,13 +327,13 @@ $ angel init hello
                 </div>
                 <div class="subtitle">
                     With features like <b>hot reloading <span class="emoji" data-emoji="🔥"></span></b>, <b>GraphQL</b>,
-                    and <b>ORM</b>, Angel is the perfect Dart backend to power
+                    and <b>ORM</b>, Angel3 is the perfect Dart backend to power
                     production apps.
                     <br><br>
                     Angel also provides support for <b>server-side templating</b>,
                     <b>WebSockets</b>, <b>authentication</b>, and much, much more.
                 </div>
-                <a href="https://github.com/angel-dart/awesome-angel#companies-using-angel-in-production"
+                <a href="https://github.com/dukefirehawk/angel3-awesome#companies-using-angel-in-production"
                     class="button is-light" target="_blank">
                     See Angel in production...</a>
             </div>
@@ -342,8 +342,8 @@ $ angel init hello
                     style="display: none">
                 <pre>
               <code class="dart">
-import 'package:angel_framework/angel_framework.dart';
-import 'package:angel_framework/http.dart';
+import 'package:angel3_framework/angel3_framework.dart';
+import 'package:angel3_framework/http.dart';
 
 main() async {
   var app = Angel(), http = AngelHttp();
@@ -396,7 +396,7 @@ class AccountsController extends Controller {
                     Angel is designed with extensibility in mind, so even when you need a feature
                     that's not officially supported, you can easily implement it yourself.
                 </div>
-                <a href="https://github.com/angel-dart" target="_blank" class="button is-dark">
+                <a href="https://github.com/dukefirehawk/angel" target="_blank" class="button is-dark">
                     View all packages...
                 </a>
             </div>
@@ -410,17 +410,16 @@ class AccountsController extends Controller {
                     <span class="emoji" data-emoji="✨"></span>
                 </div>
                 <div class="subtitle">
-                    Angel is stable, and won't unexpectedly break you. What's more,
-                    components like ORM and serialization are designed from the ground-up
+                    Angel3 is stable, and won't unexpectedly break you. What's more, components like ORM and serialization are designed from the ground-up
                     to work together, seamlessly.
                     <br><br>
                     And thanks to its
-                    <a href="https://github.com/angel-dart/test" target="_blank">unit testing support</a>,
+                    <a href="https://github.com/dukefirehawk/angel/tree/master/packages/test" target="_blank">unit testing support</a>,
                     you can ensure that your product works as expected, before hitting production.
                     Spend less time worrying about unforeseen bugs, and more time getting your
                     product to market.
                 </div>
-                <a href="https://docs.angel-dart.dev/v/2.x/guides/testing" class="button is-light" target="_blank">
+                <a href="https://angel3-docs.dukefirehawk.com/guides/testing" class="button is-light" target="_blank">
                     Learn about testing...
                 </a>
             </div>
@@ -454,10 +453,10 @@ void main() {
                 <div>
                     <p class="heading">Latest Version</p>
                     <div class="title">
-                        <a class="tags has-addons" href="https://pub.dartlang.org/packages/angel_framework"
+                        <a class="tags has-addons" href="https://pub.dev/packages/angel3_framework"
                             target="_blank">
                             <span class="tag is-dark">pub</span>
-                            <span class="tag is-info pub-version">...</span>
+                            <span class="tag is-info pub-version">4.1.0</span>
                         </a>
                     </div>
                 </div>
@@ -466,10 +465,10 @@ void main() {
                 <div>
                     <p class="heading">Status</p>
                     <div class="title">
-                        <a class="tags has-addons" href="https://pub.dartlang.org/packages/angel_framework"
+                        <a class="tags has-addons" href="https://pub.dev/packages/angel3_framework"
                             target="_blank">
                             <span class="tag is-dark">build</span>
-                            <span class="tag build-status">...</span>
+                            <span class="tag build-status">passing</span>
                         </a>
                     </div>
                 </div>
@@ -487,7 +486,7 @@ void main() {
                 <div>
                     <p class="heading">License</p>
                     <div class="title">
-                        <a class="tags has-addons" href="https://github.com/angel-dart/framework/blob/master/LICENSE"
+                        <a class="tags has-addons" href="https://github.com/dukefirehawk/angel/blob/master/LICENSE"
                             target="_blank">
                             <span class="tag is-dark">
                                 license
@@ -501,8 +500,11 @@ void main() {
         <br>
         <div class="container">
             <div class="subtitle">
-                &copy; 2016 - <span class="year">...</span>
-                <a href="https://thosakwe.com" target="_blank">Tobe Osakwe</a>.
+                <!--
+                &copy; 2021 - <span class="year">...</span>
+                -->
+                &copy; 2021 &nbsp;
+                <a href="https://dukefirehawk.com" target="_blank">dukefirehawk.com</a>.
                 </d>
             </div>
     </footer>

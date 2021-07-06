@@ -1,0 +1,5 @@
+/* Fixes for compatibility with Bulma.js */
+:host ::ng-deep material-input .input {
+    height: 1em !important ;
+    /* margin-left: $mat-grid; */
+}
