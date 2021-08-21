@@ -5,12 +5,16 @@ import 'route_paths.dart' as paths;
 
 import 'error/not_found_component.template.dart' as not_found_template;
 import 'home/home_component.template.dart' as home_template;
+import 'resources/resource_panel.template.dart' as resource_template;
+import 'examples/example_panel.template.dart' as example_template;
 
 export 'route_paths.dart';
 
 @Injectable()
 class PortalRoutes {
   RoutePath get home => paths.PortalRoutePaths.home;
+  RoutePath get resource => paths.PortalRoutePaths.resource;
+  RoutePath get example => paths.PortalRoutePaths.example;
   RoutePath get others => paths.PortalRoutePaths.others;
 
   final all = <RouteDefinition>[
@@ -22,7 +26,14 @@ class PortalRoutes {
       routePath: paths.PortalRoutePaths.home,
       component: home_template.HomePanelNgFactory,
     ),
-
+    RouteDefinition(
+      routePath: paths.PortalRoutePaths.example,
+      component: example_template.ExamplePanelNgFactory,
+    ),
+    RouteDefinition(
+      routePath: paths.PortalRoutePaths.resource,
+      component: resource_template.ResourcePanelNgFactory,
+    ),
     RouteDefinition(
       routePath: paths.PortalRoutePaths.others,
       component: not_found_template.NotFoundComponentNgFactory,

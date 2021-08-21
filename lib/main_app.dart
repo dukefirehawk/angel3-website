@@ -2,9 +2,9 @@ import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
 import 'package:angular_router/angular_router.dart';
 
-
-
-
+import 'src/error/not_found_component.dart';
+import 'src/widgets/footer.dart';
+import 'src/widgets/header.dart';
 import 'src/routes.dart';
 
 //import 'src/home/home_component.dart';
@@ -20,24 +20,26 @@ import 'src/routes.dart';
 //  const Route(path: '/home', name: 'Home', component: HomeComponent, useAsDefault: true)
 //])
 @Component(
-  selector: 'main-app',
-  styleUrls: const ['main_app.css'],
-  templateUrl: 'main_app.html',
-  directives: const [materialDirectives,routerDirectives],
-  providers: const [materialProviders, ClassProvider(PortalRoutes)],
-  exports: [PortalRoutes]
-)
+    selector: 'main-app',
+    styleUrls: ['main_app.css'],
+    templateUrl: 'main_app.html',
+    directives: [
+      DeferredContentDirective,
+      routerDirectives,
+      NotFoundComponent,
+      HeaderPanel,
+      FooterPanel
+    ],
+    providers: [materialProviders, ClassProvider(PortalRoutes)],
+    exports: [PortalRoutes])
 class MainApp implements OnInit {
-
   final PortalRoutes routes;
 
-  String title = 'Dukefirehawk';
+  String title = ' ';
 
   MainApp(this.routes);
 
-  void ngOnInit() {
-
-  }
+  void ngOnInit() {}
 
 /*
   void onHomeClick() {

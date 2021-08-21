@@ -1,0 +1,68 @@
+<nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://angel3-framework.web.app">
+            <span class="title-panel">Framework</span>
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>           
+        </a>
+    </div>
+
+    <div class="navbar-menu">
+        <div class="navbar-start">
+
+        </div>
+
+        <div class="navbar-end menu-panel">
+
+            <a class="navbar-item is-hoverable my-menu-item">
+                About
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Repository
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" (click)="gotoCliRepo()" >
+                        CLI
+                    </a>
+                    <a class="navbar-item" (click)="gotoFrameworkRepo()" >
+                        Framework
+                    </a>
+                    <a class="navbar-item" (click)="gotoGraphqlRepo()" >
+                        Graphql
+                    </a>
+                    <a class="navbar-item" (click)="gotoBoilerplateRepo()" >
+                        Boilerplates 
+                    </a>
+                    <a class="navbar-item" (click)="gotoExampleRepo()" >
+                        Examples
+                    </a>
+                    <a class="navbar-item" (click)="gotoDocumentRepo()" >
+                        Documentation
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Documentation
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" (click)="gotoDocument()" >
+                        Developer Guide
+                    </a>
+                </div>
+            </div>
+            <a class="navbar-item">
+                Examples
+            </a>
+             <a class="navbar-item" >
+                Resources
+            </a>
+       </div>
+    </div>
+</nav>

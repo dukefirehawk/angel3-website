@@ -1,10 +1,9 @@
 name: angel3_portal
-version: 0.1.0
-description: Angel3 framework web portal
+version: 1.0.0
+description: Web portal
 publish_to: none
 environment:
   sdk: ">=2.10.0 <3.0.0"
-
 dependencies:
   angular: ^6.0.1
   angular_router: ^2.0.0
@@ -13,7 +12,6 @@ dependencies:
   skawa_material_components: ^1.5.0
   firebase: ^8.0.0
   crypto: ^2.1.5
-   
 dev_dependencies:
   angular_test: ^3.0.0
   build_runner: ^1.11.1

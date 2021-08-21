@@ -1,3 +1,13 @@
-<router-outlet [routes]="routes.all"></router-outlet>
+<header-panel></header-panel>
+
+<div class="section">
+    <div class="columns is-centered">
+        <div class="column is-8">
+            <router-outlet [routes]="routes.all"></router-outlet>
+        </div>
+    </div>
+</div>
+
+<footer-panel></footer-panel>
 
 
