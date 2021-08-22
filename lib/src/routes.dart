@@ -13,8 +13,8 @@ export 'route_paths.dart';
 @Injectable()
 class PortalRoutes {
   RoutePath get home => paths.PortalRoutePaths.home;
-  RoutePath get resource => paths.PortalRoutePaths.resource;
-  RoutePath get example => paths.PortalRoutePaths.example;
+  RoutePath get resources => paths.PortalRoutePaths.resources;
+  RoutePath get examples => paths.PortalRoutePaths.examples;
   RoutePath get others => paths.PortalRoutePaths.others;
 
   final all = <RouteDefinition>[
@@ -27,11 +27,11 @@ class PortalRoutes {
       component: home_template.HomePanelNgFactory,
     ),
     RouteDefinition(
-      routePath: paths.PortalRoutePaths.example,
+      routePath: paths.PortalRoutePaths.examples,
       component: example_template.ExamplePanelNgFactory,
     ),
     RouteDefinition(
-      routePath: paths.PortalRoutePaths.resource,
+      routePath: paths.PortalRoutePaths.resources,
       component: resource_template.ResourcePanelNgFactory,
     ),
     RouteDefinition(

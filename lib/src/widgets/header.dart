@@ -14,11 +14,11 @@ import '../config/app_config.dart' as appConfig;
   providers: [],
 )
 class HeaderPanel {
-  final PortalRoutes routes;
+  final PortalRoutes _routes;
 
   String mobileMenu = "";
 
-  HeaderPanel(this.routes);
+  HeaderPanel(this._routes);
 
   void showMobileMenu() {
     print("Show menu");
@@ -28,6 +28,8 @@ class HeaderPanel {
       mobileMenu = "";
     }
   }
+
+  PortalRoutes get routes => _routes;
 
   void gotoCliRepo() {
     window.open(appConfig.cli_repo_url, "_target");

@@ -1,0 +1,22 @@
+{
+  "name": "custom_bulma",
+  "version": "1.0.0",
+  "description": "Custom Bulma",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "webpack --mode production"
+  },
+  "author": "thomashii@dukefirehawk.com",
+  "license": "ISC",
+  "devDependencies": {
+    "bulma": "^0.9.3",
+    "css-loader": "^3.6.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.3.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

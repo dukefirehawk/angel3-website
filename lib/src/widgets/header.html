@@ -18,7 +18,7 @@
 
         <div class="navbar-end menu-panel">
 
-            <a class="navbar-item is-hoverable my-menu-item">
+            <a class="navbar-item" [routerLink]="routes.home.toUrl()">
                 About
             </a>
             <div class="navbar-item has-dropdown is-hoverable">
@@ -57,10 +57,10 @@
                     </a>
                 </div>
             </div>
-            <a class="navbar-item">
+            <a class="navbar-item" [routerLink]="routes.examples.toUrl()">
                 Examples
             </a>
-             <a class="navbar-item" >
+             <a class="navbar-item"  [routerLink]="routes.resources.toUrl()">
                 Resources
             </a>
        </div>
